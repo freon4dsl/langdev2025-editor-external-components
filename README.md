@@ -26,6 +26,8 @@ In the first terminal startup the application and =go to the URL being show.
 npm run dev
 ```
 
+**NB** You can install the `freon` Visual Studio Code extension to get a fully working langusge server for the Freon meta languages (the .ast e=and .edit files).
+
 # See External Widgets
 After opening the EdultEducation1 model, you will see the textual projections.
 To see the external components, goto the `Change Views` menu (the Eye icon: the rightmost on the toolbar)
