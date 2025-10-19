@@ -1,5 +1,8 @@
 # langdev2025-editor-external-components
-Demo application used in the LangDev 2025 presentation "Freon-Powered: Crafting Web-Native DSL Editors That Wow".
+This is the code fopr the demo application used in the LangDev 2025 presentation "Freon-Powered: Crafting Web-Native DSL Editors That Wow".
+
+It shows how external widgets can be easily integrated in a Freon editor through the Freon plugin mechanism.
+
 
 # setup
 Start a bash terminal and run the following.
