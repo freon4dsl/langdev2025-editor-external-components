@@ -1,0 +1,49 @@
+editor final
+
+Schedule {[
+    Schedule ${self.name} starting at ${startDate replace=EDatePicker}
+    Internal ${internal checkbox} Optional ${optional checkbox}    
+    
+    ${self.timeSlots replace=Schedule}
+]}
+
+Slot {[
+    Teacher: ${self.teacher}
+    Room:    ${self.room}
+    Course:  ${self.course}
+]}
+
+Person {[
+        [fragment nameAndIcon1]
+        [fragment Skills1 wrap=ECollapsible text="Skills"]
+    ]
+    fragment nameAndIcon1 [
+        [external=PersonIcon] Nickname: ${self.name}
+        Full Name: ${self.fullName}
+        ${self.phone wrap=PhoneButton}
+    ]  
+    fragment Skills1 [
+         Availability: ${self.availability checkbox} Competence: ${self.competence}
+    ]
+}
+
+Staff {[
+    Staff in the category: ${self.name}
+
+    ${self.teachers replace=ExternalAccordion noOpen="single" conceptName="Person"}
+]}
+
+Buildings {[
+    ${buildings replace=ETab conceptName="Building"}
+]}
+
+Building {[
+    ${rooms replace=ExternalAccordion conceptName="Room" noOpen="multiple"}
+]}
+
+
+
+
+
+
+

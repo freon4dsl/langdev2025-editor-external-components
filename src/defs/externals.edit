@@ -1,0 +1,63 @@
+editor externals
+
+// STEP 0 - Checkbox
+//          Internal ${internal checkbox} Optional ${optional checkbox}
+// STEP 1 - DatePicker
+//         ${startDate replace=EDatePicker}
+Schedule {[
+    Schedule ${self.name} starting on ${startDate replace=EDatePicker}
+    Internal ${internal checkbox} Optional ${optional checkbox}
+
+    ${self.timeSlots replace=Schedule}
+]}
+
+// STEP 6 - Schedule
+//          ${self.timeSlots replace=Schedule}
+//          Different TimeSlot
+Slot {[
+    Teacher: ${self.teacher}
+    Room:    ${self.room}
+    Course:  ${self.course}
+]}
+
+// STEP 0 - Availability checkbox
+//          ${self.availability checkbox}
+// STEP 2 - Person Icon + Phone Button
+//          [external=PersonIcon] Nickname: ${self.name}
+//          ${self.phone wrap=PhoneButton}     
+// STEP 3 - Collapsible Skils
+//          fragment Skills [ ... ]
+//          [fragment Skills  wrap=ECollapsible text="Skills"]
+Person {[
+        [external=PersonIcon] Nickname: ${self.name}
+        Full Name: ${self.fullName}
+        ${self.phone wrap=PhoneButton}
+        [fragment Skills wrap=ECollapsible text="Skills"]
+    ]
+    fragment Skills [
+         Availability: ${self.availability} Competence: ${self.competence}
+    ]
+}
+// STEP - 0
+//        ${self.availability checkbox} 
+
+// STEP 4 - Accordion
+//          ${self.teachers replace=ExternalAccordion cc}
+Staff {[
+    Staff in the category: ${self.name}
+
+    ${self.teachers replace=ExternalAccordion noOpen="multiple" conceptName="Person"}
+]}
+
+// STEP 5 - Tab
+//          ${buildings replace=ETab conceptName="Building"}
+Buildings {[
+    ${buildings replace=ETab conceptName="Building"}
+]}
+
+
+
+
+
+
+

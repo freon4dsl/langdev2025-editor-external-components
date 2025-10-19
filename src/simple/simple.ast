@@ -1,0 +1,17 @@
+language CourseSchedule
+
+model CourseSchedule {
+    name: identifier;
+    persons: Staff[];
+}
+
+modelunit Staff {
+    name: identifier;
+    teachers: Person[];
+}
+
+concept Person {
+    name: identifier;
+    lastname: string; 
+    phone: string;    
+}

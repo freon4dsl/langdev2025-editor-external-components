@@ -1,0 +1,13 @@
+editor default
+
+Staff {[
+    Staff ${name}
+     
+    ${self.teachers}
+]}
+
+Person {[
+    Person ${name}
+        Lastname: ${lastname} 
+        Phone: ${phone}
+]}

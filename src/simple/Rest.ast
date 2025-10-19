@@ -1,0 +1,33 @@
+language CourseSchedule
+
+model CourseSchedule {
+    name: identifier;
+    persons: Staff[];
+}
+
+modelunit Schedule {
+    name: identifier;
+    teachers: Slot[];
+}
+
+concept Slot {
+    time: TimeStamp;
+    reference teacher: Person;
+//     reference room: Room;
+//     reference course: Course;
+}
+
+limited TimeStamp {
+    day: number; // 1 = Monday, 2 = Tuesday, etc
+    part: number; // 1 indicates morning, 2 indicates afternoon
+    MondayMorning = { day: 1, part: 1 }
+    TuesdayMorning = { day: 2, part: 1 }
+    WednesdayMorning = { day: 3, part: 1 }
+    ThursdayMorning = { day: 4, part: 1 }
+    FridayMorning = { day: 5, part: 1 }
+    MondayAfternoon = { day: 1, part: 2 }
+    TuesdayAfternoon = { day: 2, part: 2 }
+    WednesdayAfternoon = { day: 3, part: 2 }
+    ThursdayAfternoon = { day: 4, part: 2 }
+    FridayAfternoon = { day: 5, part: 2 }
+}

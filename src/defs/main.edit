@@ -1,0 +1,64 @@
+editor default
+
+global {
+    external {
+        PersonIcon, PhoneButton, StaffAccordion, Schedule, 
+        ExternalAccordion, ETab, ECollapsible, EDatePicker
+    }
+}
+
+/* model unit Staff */
+Staff {[
+    Staff in the category: ${self.name}
+    
+        ${self.teachers}
+]}
+
+Person {[
+        Nickname: ${self.name}
+        Full Name: ${self.fullName}
+        Phone number: ${self.phone}
+        Availability: ${self.availability} Competence: ${self.competence}
+    ]
+}
+
+/* model unit CourseCategory */
+CourseCategory {[
+    Category: ${self.name}
+    
+        ${self.courses}
+]}
+
+Course {[
+    Course ${name}
+    ${description} 
+]}
+
+/* model unit Schedule */
+Schedule {[
+    Schedule ${self.name} starting on ${startDate}
+    Internal ${internal} Optional ${optional}
+
+    ${self.timeSlots}
+]}
+Slot {[
+    ${self.time}
+        Teacher: ${self.teacher}
+        Room:    ${self.room}
+        Course:  ${self.course}
+]}
+
+Buildings {[
+    ${buildings}   
+]}
+
+Building {[
+    Building ${name} 
+        Rooms
+            ${rooms} 
+]}
+
+Room {[
+    Room ${name} 
+        equipment: ${equipment} 
+]}
