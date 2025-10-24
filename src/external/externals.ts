@@ -1,6 +1,5 @@
 import { setCustomComponents } from "@freon4dsl/core-svelte";
 import ECollapsible        from "../lib/components/ui/collapsible/ECollapsible.svelte";
-import DatePickerComponent from "../lib/components/ui/crchub/DatePickerComponent.svelte";
 import ExternalAccordion   from "../lib/components/ui/accordion/ExternalAccordion.svelte";
 import { Button, type ButtonProps } from '../lib/components/ui/button/index.js';
 import DatePicker from "../lib/components/ui/datepicker/DatePicker.svelte";
@@ -20,7 +19,6 @@ setCustomComponents([
     {component: Button, knownAs: "EButton"},
     {component: ExternalAccordion, knownAs: "ExternalAccordion"},
     {component: ECollapsible, knownAs: "ECollapsible"},
-    // {component: DatePickerComponent, knownAs: "CRCDatePicker"},
     {component: DatePicker, knownAs: "EDatePicker"},
     {component: TabComponent, knownAs: "ETab"},
     { component: PersonIcon, knownAs: "PersonIcon" },
