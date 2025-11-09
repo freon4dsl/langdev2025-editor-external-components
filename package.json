@@ -1,6 +1,6 @@
 {
     "name": "langdev-2025-demo",
-    "version": "2.0.0-beta.5",
+    "version": "2.0.0",
     "license": "MIT",
     "type": "module",
     "scripts": {
@@ -12,6 +12,7 @@
         "dev": "vite",
         "generate": "freon all -d src/defs -o src/freon",
         "preview": "vite preview",
+        "to-lionweb": "freon lionweb-it -d src/defs -o src/freon",
         "start": "sirv public --port 8000",
         "validate": "svelte-check --tsconfig ./tsconfig.json",
         "errors-only": "svelte-check --threshold error --tsconfig ./tsconfig.json",
@@ -38,11 +39,11 @@
         "vite": "^6.3.5"
     },
     "dependencies": {
-        "@freon4dsl/core": "2.0.0-beta.5",
-        "@freon4dsl/core-svelte": "2.0.0-beta.5",
-        "@freon4dsl/meta": "2.0.0-beta.5",
-        "@freon4dsl/server": "2.0.0-beta.5",
-        "@freon4dsl/weblib-flowbite": "2.0.0-beta.5",
+        "@freon4dsl/core": "2.0.0",
+        "@freon4dsl/core-svelte": "2.0.0",
+        "@freon4dsl/meta": "2.0.0",
+        "@freon4dsl/server": "2.0.0",
+        "@freon4dsl/weblib-flowbite": "2.0.0",
         "@lucide/svelte": "0.544.0",
         "@types/node": "^20.14.1",
         "kotlin": "^1.5.21",
